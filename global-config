@@ -1,5 +1,5 @@
 [color]
-	ui = auto
+    ui = auto
 
 [color "branch"]
     current = yellow reverse
@@ -19,24 +19,37 @@
 
 [alias]
     a = add
-    am = commit --amend
     ap = add --patch
     b = branch
     c = commit -m
-    ca = commit -am
+    ca = commit --amend
     co = checkout
+    cm = checkout master
     cp = cherry-pick
     d = diff
     dc = diff --cached
+    f = fetch
     i = ls-files -o -i --exclude-standard
-    l = log --graph --stat
-    lo = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    l = log --graph --stat --decorate
+    lj = log --graph --stat --decorate --author=finnis
+    lo = log --graph --abbrev-commit --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     lp = log -p
     p = push
-    r = reset --hard HEAD
+    po = pull origin master
+    r = reset HEAD
+    rhh = reset --hard HEAD
     s = status
+    sa = submodule add
+    sl = stash list
+    sp = stash pop
+    st = stash
     us = reset HEAD
     uc = reset --soft HEAD^
 
 [interactive]
-	singlekey = true
+    singlekey = true
+[user]
+    email = josh.finnis@bunchball.com
+    name = Joshua Finnis
+[web]
+    browser = open
