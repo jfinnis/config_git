@@ -32,7 +32,7 @@
     i = ls-files -o -i --exclude-standard
     l = log --graph --stat --decorate
     lo = log --graph --abbrev-commit --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-    lp = log -p --ignore-all-space
+    lp = log -p --ignore-all-space -- . ':!package-lock.json'
     p = push
     po = pull origin master
     r = reset HEAD
