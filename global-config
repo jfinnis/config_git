@@ -116,3 +116,5 @@
     plus-emph-style = syntax bold "#007800"
     plus-style = syntax "#004433"
     whitespace-error-style = "#280050"
+[init]
+	defaultBranch = main
