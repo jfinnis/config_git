@@ -36,6 +36,7 @@
     p = push
     po = pull origin master
     r = reset HEAD
+    rs = restore --staged .
     s = status
     sa = submodule add
     sl = stash list
