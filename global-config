@@ -51,10 +51,6 @@
     singlekey = true
     diffFilter = delta --color-only --features=interactive
 
-[user]
-    email = josh.finnis@bunchball.com
-    name = Josh Finnis
-
 [web]
     browser = open
 
