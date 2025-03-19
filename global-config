@@ -31,6 +31,7 @@
     f = fetch
     i = ls-files -o -i --exclude-standard
     l = log --graph --stat --decorate
+    lj = log --graph --stat --decorate --author=finnis
     lo = log --graph --abbrev-commit --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset%s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
     lp = log -p --ignore-all-space -- . ':!package-lock.json'
     p = push
@@ -44,10 +45,15 @@
     st = stash
     us = reset HEAD
     uc = reset --soft HEAD^
+#diff -- . ':!package-lock.json'
 
 [interactive]
     singlekey = true
     diffFilter = delta --color-only --features=interactive
+
+[user]
+    email = josh.finnis@bunchball.com
+    name = Josh Finnis
 
 [web]
     browser = open
@@ -63,19 +69,25 @@
 
 [push]
     autoSetupRemote = true
+	autoSetupRemove = true
+	followTags = true
 
 [branch]
-	sort = -committerdate
+    sort = -committerdate
 
 [core]
     editor = nvim
     pager = delta
+	excludesFile = ~/.config/git/ignore
 
 [merge]
-    conflictstyle = diff3
+	conflictStyle = zdiff3
 
 [diff]
-    colorMoved = default
+    colorMoved = plain
+    algorithm = histogram
+    mnemonicPrefix = true
+    renames = true
 
 [delta]
     navigate = true
@@ -117,5 +129,32 @@
     plus-emph-style = syntax bold "#007800"
     plus-style = syntax "#004433"
     whitespace-error-style = "#280050"
+
 [init]
-	defaultBranch = main
+    defaultBranch = main
+
+[column]
+    ui = auto
+
+[tag]
+    sort = version:refname
+
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+
+[help]
+    autocorrect = prompt
+
+[commit]
+    verbose = true
+
+[rerere]
+    enabled = true
+    autoupdate = true
+
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true

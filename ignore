@@ -1,0 +1,4 @@
+node_modules
+.aider*
+aider.conf.yml
+CONVENTIONS.md
