@@ -37,6 +37,7 @@
     p = push
     po = pull origin master
     r = reset HEAD
+    rl = reflog --date=ISO
     rs = restore --staged .
     s = status
     sa = submodule add
@@ -54,6 +55,10 @@
 [web]
     browser = open
 
+[grep]
+    lineNumber = true
+    patternType = perl
+
 [http]
     sslverify = false
 
@@ -65,8 +70,8 @@
 
 [push]
     autoSetupRemote = true
-	autoSetupRemove = true
-	followTags = true
+    autoSetupRemove = true
+    followTags = true
 
 [branch]
     sort = -committerdate
@@ -74,7 +79,7 @@
 [core]
     editor = nvim
     pager = delta
-	excludesFile = ~/.config/git/ignore
+    excludesFile = ~/.config/git/ignore
 
 [merge]
 	conflictStyle = zdiff3
