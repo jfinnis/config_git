@@ -1,3 +1,11 @@
+# a second [user] section is in ./gitconfig.work
+[user]
+    email = joshfinnis@gmail.com
+    name = Joshua Finnis
+
+[includeIf "gitdir:~/Documents/dev/"]
+    path = ~/.config/git/gitconfig.work
+
 [color]
     ui = auto
 
@@ -82,7 +90,7 @@
     excludesFile = ~/.config/git/ignore
 
 [merge]
-	conflictStyle = zdiff3
+    conflictStyle = diff3
 
 [diff]
     colorMoved = plain
@@ -159,3 +167,5 @@
     autoSquash = true
     autoStash = true
     updateRefs = true
+
+# vim:ft=gitconfig
